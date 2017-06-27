@@ -17,6 +17,7 @@ var todoList = {
         }
     }
 
+    // Check to see if Todos List is empty. Print a message if it is.
     if (todoList.todos.length === 0) {
       console.log("Your Todos List is empty. Add some todos!")
     } else {

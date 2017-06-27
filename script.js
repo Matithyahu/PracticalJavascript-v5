@@ -1,5 +1,10 @@
 var todoList = {
-  todos: [],
+  // Initial loading of Todo Items so I don't have to type them in manually
+  todos: [
+    {completed: false, todoText: "Write out my goals"},
+    {completed: true, todoText: "start programming"}
+  ],
+
   displayTodos: function() {
     var loopTodos = function() {
       for (var i = 0; i < todoList.todos.length; i++){
@@ -11,8 +16,14 @@ var todoList = {
         console.log(checkMark + todoList.todos[i].todoText );
         }
     }
-    console.log("My Todos: ");
-    loopTodos();
+
+    if (todoList.todos.length === 0) {
+      console.log("Your Todos List is empty. Add some todos!")
+    } else {
+      console.log("My Todos: ");
+      loopTodos();
+    }
+
   },
 
   addTodo: function(todoText) {
@@ -39,6 +50,7 @@ var todoList = {
     this.displayTodos();
   }
 }
+
 
 
 /*  Commented out the intro exercise

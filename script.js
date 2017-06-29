@@ -8,10 +8,10 @@ var todoList = {
   displayTodos: function() {
     var loopTodos = function() {
       for (var i = 0; i < todoList.todos.length; i++){
-        if (todoList.todos[i].completed === false) {
-          var checkMark = " * ";
+        if (todoList.todos[i].completed === true) {
+          var checkMark = "(x) ";
         } else {
-          var checkMark = " x ";
+          var checkMark = "( ) ";
         }
         console.log(checkMark + todoList.todos[i].todoText );
         }
